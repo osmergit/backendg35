@@ -8,7 +8,7 @@ user
 .then((data) => res.json(data))
 .catch((error) => res.json({message: error}))
 }
-
+//aca Mostramos todos los usuario de la base de datos de la colección users
 export const mostrarusuarios = (req,res) => {
 usuario
 .find()
@@ -16,7 +16,7 @@ usuario
 .catch((error) => res.json({message: error}))
 
 }
-
+//mostrar un usuario especifico
 export const onlyuser = (req,res) => {
     const { id }  = req.params;
     usuario
@@ -25,7 +25,7 @@ export const onlyuser = (req,res) => {
     .catch((error) => res.json({message: error}))
 
 }
-
+//Aca actualizamos el usuario especifico
 export const upusuario = (req,res) => {
     const { id } = req.params;
     const {nomuser, password, correo}= req.body
@@ -35,7 +35,7 @@ export const upusuario = (req,res) => {
     .catch((error) => res.json({message: error}))
 
 }
-
+//creamos el metodo para eliminar un usuario especifico
 export const delusuario = (req, res) =>
 {
     const { id } = req.params;

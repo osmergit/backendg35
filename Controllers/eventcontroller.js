@@ -1,5 +1,7 @@
+//aca importamos mi modelo eventos
 import {evento} from '../Models/evento.js';
 
+//Regitrar un evento en la base de datos
 export const regevento = (req, res) => {
     const cevento = evento(req.body);
     cevento
